@@ -23,10 +23,38 @@ class AboutScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     const _SectionIntro(
-                      eyebrow: 'About',
-                      title: 'The Story Behind This App',
+                      eyebrow: 'About Us',
+                      title: 'Legends of Bengal',
                       description:
-                          "The Freedom Journey is an interactive digital museum that turns India's independence history into a tactile, chapter-based experience.",
+                          'Legends of Bengal is dedicated to bringing the inspiring stories of West Bengal’s freedom fighters and leaders to life who enriched our country through their valour, literature and art.\n\nThrough engaging virtual tours we aim to preserve the legacy of these incredible fighters and inspire future generations to continue to serve and contribute towards our society as well as learn from their valour and voyages.',
+                    ),
+                    HistoricalCard(
+                      margin: const EdgeInsets.only(bottom: 16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              const Icon(
+                                Icons.flag_rounded,
+                                color: AppColors.gold,
+                              ),
+                              const SizedBox(width: 12),
+                              Text(
+                                'Our Mission',
+                                style: Theme.of(context).textTheme.titleLarge
+                                    ?.copyWith(fontWeight: FontWeight.w700),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 14),
+                          Text(
+                            'To celebrate India’s rich heritage and traditions by reviving inspiring life journeys of freedom fighters.',
+                            style: Theme.of(context).textTheme.bodyMedium
+                                ?.copyWith(color: AppColors.muted),
+                          ),
+                        ],
+                      ),
                     ),
                     HistoricalCard(
                       margin: const EdgeInsets.only(bottom: 16),
